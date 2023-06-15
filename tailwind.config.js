@@ -5,11 +5,12 @@ export default {
     extend: {
       colors: {
         brand: "#52BFFF",
+        dark: '#7A7A7A'
       },
     },
     container: {
       center: true,
-      padding: "1.  2rem",
+      padding: "1.2rem",
       screens: {
         xs: "430px",
         sm: "640px",
