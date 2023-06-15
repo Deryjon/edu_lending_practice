@@ -5,7 +5,7 @@
       </div>
       <p class="flex py-3 ml-11 lg:ml-[16px] text-brand text-sm font-bold lg:text-[16px]">Оставить заявку</p>
     </button>
-    <button class="burger-btn w-9 h-9 mt-3 ml-[65px] flex justify-center items-center lg:hidden order-3" >
+    <button class="burger-btn w-9 h-9 mt-3 ml-[65px] flex justify-center items-center lg:hidden order-3" @click="$emit('openMenu')" >
       <img src="../../../assets/icons/burger.svg" alt="burger-btn">
 
     </button>
