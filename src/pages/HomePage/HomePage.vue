@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">  
+  <div class="home-page min-h-[400px]">  
     <!-- <HeroSection/> -->
     </div>
 </template>

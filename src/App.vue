@@ -2,18 +2,18 @@
   <main>
     <HeaderLayout />
     <RouterView />
-    <FooterLayout />
+ <FooterLayout />
   </main>
 </template>
 
 <script>
-import HeaderLayout from "./layouts/HeaderLayout/HeaderLayout.vue";
 import FooterLayout from "./layouts/FooterLayout/FooterLayout.vue";
+import HeaderLayout from "./layouts/HeaderLayout/HeaderLayout.vue";
+
 export default {
   components: {
     HeaderLayout,
-
     FooterLayout
-  },
+},
 };
 </script>
