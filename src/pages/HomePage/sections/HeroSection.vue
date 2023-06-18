@@ -1,5 +1,5 @@
 <template>
-    <section class="hero min-h-screen bg bg-right lg:bg-center flex items-end py-5 md:items-center">
+    <section class="hero min-h-screen bg  lg:bg-center flex items-end py-5 md:items-center">
         <div class="container">
             <div class="block relative lg:max-w-[721px]">
 
@@ -30,4 +30,6 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
 </style>

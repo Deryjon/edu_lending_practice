@@ -1,5 +1,6 @@
 <template>
-  <header class="header pt-[30px] w-full transition-all">
+  <header class="header  z-50 fixed top-0 w-full transition-all"
+  :class="isScrolled ? 'header-scrolled lg:pt-5 pt-3 lg:pb-6 pb-3' : 'lg:pt-8'">
     <div class="container flex items-center justify-between">
       <HeaderLogo  />
       <HeaderLinks  />
@@ -24,12 +25,22 @@ export default {
   data() {
     return{
       isOpen: false,
+      isScrolled: false,
     }
   },
   methods: {
     toggleMenu() {
       this.isOpen = !this.isOpen;
     },
+  },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY) {
+        this.isScrolled = true;
+      } else {
+        this.isScrolled = false;
+      }
+    });
   },
 };
 </script>
@@ -42,5 +53,10 @@ export default {
 .menu-enter-from,
 .menu-leave-to {
   transform: translateX(100%);
+}
+.header-scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  
 }
 </style>
