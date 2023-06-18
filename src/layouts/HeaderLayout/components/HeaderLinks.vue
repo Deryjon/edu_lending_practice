@@ -1,5 +1,5 @@
 <template>
-    <div class="footer-links  flex gap-5 order-1 lg:order-none items-center ">
+    <div class="footer-links hidden  lg:flex gap-5  items-center ">
         <a href="">
             <img class="w-[12px] h-[12px] lg:w-[15px] lg:h-[15px]" src="../../../assets/icons/inst-icon.svg" alt="social link">
         </a>

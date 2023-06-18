@@ -1,13 +1,13 @@
 <template>
   <div
-    class="hidden-menu bg-[#F8FCFF] fixed left-0 top-0 w-full h-full p-5 flex flex-col justify-between"
+    class="hidden-menu bg-[#F8FCFF] fixed left-0 top-0 w-full h-full p-5 flex flex-col "
   >
-    <div class="wrapper">
-      <div class="head flex items-center pt-3">
+    <div class="wrapper ">
+      <div class="head flex items-center justify-between pt-3">
         <HeaderLinks />
         <HeaderLogo @click="$emit('closeMenu')" class="order-2" />
         <button
-          class="close-btn ml-auto w-7 h-7 flex justify-center items-center order-3"
+          class="close-btn  w-7 h-7 flex justify-center items-center order-3"
           @click="$emit('closeMenu')"
         >
           <img src="../../../assets/icons/times.svg" alt="times-icon" />
@@ -40,7 +40,7 @@
         </button>
       </div>
     </div>
-    <div class="location-info">
+    <div class="location-info mt-[150px]">
       <div class="time flex items-center gap-2">
         <div class="icon">
           <img src="../../../assets/icons/location-time.svg" alt="" />
