@@ -2,14 +2,14 @@
   <section
     class="hero min-h-screen bg bg-top lg:bg-center flex items-center py-5 xs:items-center"
   >
-    <div class="container lg:flex lg:flex-col gap-[150px]">
+    <div class="container lg:flex lg:flex-col gap-[300px]">
       <div class="block relative w-[300px] lg:w-[721px] ">
         <div
           class="bg-layer lg:w-[899px] h-[606px] absolute left-0 top-0 bg-[#fff] opacity-50 blur-[150px]"
         ></div>
 
         <h1
-          class="title relative text-lg lg:text-[44px] lg:mt-[150px] w-full leading-5 lg:leading-[60px] text-dark font-bold"
+          class="title relative text-lg lg:text-[44px] lg:mt-[200px] w-full leading-5 lg:leading-[60px] text-dark font-bold"
         >
           Грант и контрактное обучение в
           <span
