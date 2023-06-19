@@ -6,11 +6,11 @@
       <HeaderLinks  />
       <HeaderMenu />
       <HeaderActions @openMenu="toggleMenu" />
-      <Transition name="menu"> 
-        <HiddenMenu class="z-50"  v-if="isOpen" @closeMenu="toggleMenu"/>
-      </Transition> 
     </div>
   </header>
+  <Transition name="menu"> 
+    <HiddenMenu class="z-50"  v-if="isOpen" @closeMenu="toggleMenu"/>
+  </Transition> 
 </template>
 
 <script>

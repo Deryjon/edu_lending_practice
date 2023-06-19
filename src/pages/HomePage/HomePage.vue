@@ -1,6 +1,6 @@
 <template>
   <div class="home-page min-h-screen">  
-    <HeroSection/>
+    <!-- <HeroSection/> -->
     </div>
 </template>
 <script>
