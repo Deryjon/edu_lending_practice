@@ -28,7 +28,7 @@
 
         <TheCallButton class="relative mt-8"></TheCallButton>
       </div>
-      <div class="times w-full relative lg:items-center lg:gap-10 hidden lg:flex">
+      <div class="times  lg:ml-[100px] relative lg:items-center lg:gap-10 hidden lg:flex">
         <div class="location flex items-center gap-3" >
         <div class="icon">
           <img src="../../../assets/icons/location-info.svg" alt="" />

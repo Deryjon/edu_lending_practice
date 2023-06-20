@@ -7,7 +7,7 @@
         <FooterMenu/>
         <FooterLinks/>
       </div>
-      <div class="lg:border-b mt-[14px] mb-[9px]" ></div>
+      <div class=" lg:border-b-gray mt-[14px] mb-[9px]"></div>
       <div class="bottom  flex items-center ">
         <FooterLogoWide class="hidden lg:block" />
         <FooterLocation/>
@@ -28,3 +28,5 @@ import FooterLocation from './components/FooterLocation.vue';
     components: { FooterLogo, FooterMenu, FooterLinks, FooterLogoWide, FooterLocation,  }
 }
   </script>
+
+  
