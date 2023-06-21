@@ -1,7 +1,7 @@
 <template>
-    <div class="card  w-full lg:w-[367px] h-[122px] lg:h-[180px] mt-[55px] p-[11px] ">
-        <div class="bord w-[290px] lg:w-[343px] h-[104px] lg:h-[156px] ">
-        <div class="icon ml-[100px] mt-[-60px] lg:mt-[-70px]  lg:w-[150px] ">
+    <div class="card  w-[300px] lg:w-[367px] h-[122px] lg:h-[180px]  mt-[55px] p-[11px] ">
+        <div class="bord w-[282px] lg:w-[343px] h-[104px] lg:h-[156px] ">
+        <div class="icon ml-[85px] lg:ml-[100px] mt-[-60px] lg:mt-[-70px]  lg:w-[150px] ">
           <img :src="`${data.image}`" alt="icon" class="lg:w-full"/>
         </div>
       <div class="text w-[247px] h-[36px] m-auto  mt-4">

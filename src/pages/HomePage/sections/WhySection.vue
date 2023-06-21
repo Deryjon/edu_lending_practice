@@ -1,26 +1,26 @@
 <template>
-  <section class="why mt-16 mb-[100px]">
+  <section class="why min-h-screen mt-16 mb-[100px]">
 
     <div class="container">
-        <TheSubtitle class="w-[300px] lg:w-[437px] lg:mr-auto   lg:ml-auto">Добро пожаловать в нашу группу иностранного образования</TheSubtitle>
+        <TheSubtitle class="w-[300px] lg:w-[437px] mr-auto ml-auto">Добро пожаловать в нашу группу иностранного образования</TheSubtitle>
 
         <theTitle class="text-center mb-16">Почему мы?</theTitle>
-        <div class="wrapper lg:flex lg:justify-between">
+        <div class="wrapper   lg:flex lg:justify-between">
             <WhyCards
             v-for="item in whyCardData"
             :key="item.text"
             :data="item"
-            
+            class="ml-auto mr-auto"
             />
         </div>
-        <theTitle class="text-center mt-[150px]">Университеты</theTitle>
+        <theTitle class="text-center mt-[100px]">Университеты</theTitle>
         <TheSubtitle class="w-[300px] lg:w-[437px] text-center mr-auto   ml-auto">В нашем каталоге вы найдете более 100 университетов из более чем 14 стран</TheSubtitle>
-        <Slider class="mt-6 lg:mt-10 mb-10"/>
+        <Slider class="mt-6 lg:mt-10 "/>
     </div>
     <img
       src="../../../assets/icons/tree-icon.svg"
       alt=""
-      class="relative bottom-[900px] hidden lg:block"
+      class="relative bottom-[1230px] hidden lg:block"
     />
     
   </section>

@@ -1,5 +1,5 @@
 <template>
-    <div class="slider " ref="slider" @touchstart="onTouchStart" @touchend="onTouchEnd">
+    <div class="slider pb-[100px]" ref="slider" @touchstart="onTouchStart" @touchend="onTouchEnd">
       <div class="slider-track lg:gap-5 gap-3" :style="trackStyles">
         <div class="slider-item bg-white p-[12px] rounded-3xl" v-for="(item, index) in items" :key="index">
          <div class="img w-[246px] h-[163px] ">
