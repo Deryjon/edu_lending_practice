@@ -1,5 +1,5 @@
 <template>
-  <section class="why min-h-screen mt-16 mb-[100px] lg:mb-[0] lg:h-[1500px]">
+  <section class="why min-h-screen mt-16 mb-[100px] lg:mb-[10px] lg:h-[1530px]">
 
     <div class="container">
         <TheSubtitle class="w-[300px] lg:w-[437px] mr-auto ml-auto text-center">Добро пожаловать в нашу группу иностранного образования</TheSubtitle>
@@ -17,7 +17,7 @@
         <TheSubtitle class="w-[300px] lg:w-[437px] text-center mr-auto   ml-auto">В нашем каталоге вы найдете более 100 университетов из более чем 14 стран</TheSubtitle>
         <SliderUnivers class="mt-6 lg:mt-10 "/>
         <theTitle class="text-center mt-10">Отзывы наших студентов</theTitle>
-        <SliderReviews class="mt-7 lg:mt-12"/>
+        <SliderReviews class="mt-7 lg:mt-12 "/>
     </div>
     <img
       src="../../../assets/icons/tree-icon.svg"

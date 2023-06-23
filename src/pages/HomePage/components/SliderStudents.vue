@@ -7,7 +7,7 @@
   >
     <div class="slider-track lg:gap-5 gap-3" :style="trackStyles">
       <div
-        class="slider-item w-[140px] lg:w-[270px] h-[140px] lg:h-[270px] mt-[70px] lg:mt-[100px]  p-[12px] rounded-3xl"
+        class="slider-item w-[140px] lg:w-[270px] h-[140px] lg:h-[270px] bg-top mt-[20px] lg:mt-[100px]  p-[12px] rounded-3xl"
         v-for="(item, index) in items"
         :key="index"
       >
@@ -123,7 +123,6 @@ export default {
 .slider-item {
   flex-shrink: 0;
   background-image: url(../../../assets/images/students-photo.jpg);
-  background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
 }
@@ -133,8 +132,6 @@ export default {
   top: 50%;
   transform: translateY(-50%);
   background: linear-gradient(213.88deg, #b1e2ff -67.78%, #68c7ff 175.48%);
-  border: 1px solid #ccc;
-  border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
