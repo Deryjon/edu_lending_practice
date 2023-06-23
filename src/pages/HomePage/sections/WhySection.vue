@@ -1,5 +1,5 @@
 <template>
-  <section class="why min-h-screen mt-16 mb-[100px] lg:mb-[0]">
+  <section class="why min-h-screen mt-16 mb-[100px] lg:mb-[0] lg:h-[1500px]">
 
     <div class="container">
         <TheSubtitle class="w-[300px] lg:w-[437px] mr-auto ml-auto text-center">Добро пожаловать в нашу группу иностранного образования</TheSubtitle>
