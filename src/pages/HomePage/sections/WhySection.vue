@@ -1,8 +1,8 @@
 <template>
-  <section class="why min-h-screen mt-16 mb-[100px]">
+  <section class="why min-h-screen mt-16 mb-[100px] lg:mb-[0]">
 
     <div class="container">
-        <TheSubtitle class="w-[300px] lg:w-[437px] mr-auto ml-auto">Добро пожаловать в нашу группу иностранного образования</TheSubtitle>
+        <TheSubtitle class="w-[300px] lg:w-[437px] mr-auto ml-auto text-center">Добро пожаловать в нашу группу иностранного образования</TheSubtitle>
 
         <theTitle class="text-center mb-16">Почему мы?</theTitle>
         <div class="wrapper   lg:flex lg:justify-between">
@@ -15,24 +15,27 @@
         </div>
         <theTitle class="text-center mt-[100px]">Университеты</theTitle>
         <TheSubtitle class="w-[300px] lg:w-[437px] text-center mr-auto   ml-auto">В нашем каталоге вы найдете более 100 университетов из более чем 14 стран</TheSubtitle>
-        <Slider class="mt-6 lg:mt-10 "/>
+        <SliderUnivers class="mt-6 lg:mt-10 "/>
+        <theTitle class="text-center mt-10">Отзывы наших студентов</theTitle>
+        <SliderReviews class="mt-7 lg:mt-12"/>
     </div>
     <img
       src="../../../assets/icons/tree-icon.svg"
       alt=""
-      class="relative bottom-[1230px] hidden lg:block"
+      class="relative bottom-[1850px] hidden lg:block"
     />
     
   </section>
 </template>
 
 <script>
-import Slider from '../components/Slider.vue';
+import SliderUnivers from '../components/SliderUnivers.vue';
+import SliderReviews from '../components/SliderReviews.vue';
 import theTitle from '../../../ui/theTitle.vue'
 import WhyCards from '../components/WhyCards.vue'
 import TheSubtitle from '../../../ui/theSubtitle.vue';
 export default {
-    components: { theTitle, WhyCards, TheSubtitle, Slider },
+    components: { theTitle, WhyCards, TheSubtitle, SliderUnivers, SliderReviews },
     data(){
         return{
             whyCardData: [
