@@ -1,6 +1,6 @@
 <template>
   <div
-    class="slider pb-[100px] w-full"
+    class="slider pb-[100px] lg:pb-0 w-full"
     ref="slider"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
@@ -13,7 +13,7 @@
       ></div>
     </div>
     <button
-      class="slider-control slider-prev hidden lg:block w-12 h-12 rounded-full border-none mt-[-50px] lg:mt-[-5px] p-[5px]"
+      class="slider-control slider-prev hidden lg:block w-12 h-12 rounded-full border-none mt-[-50px] lg:mt-[50px] p-[5px]"
       @click="slidePrev"
     >
       <div
@@ -27,7 +27,7 @@
       </div>
     </button>
     <button
-      class="slider-control slider-next hidden lg:block lg:w-12 lg:h-12 lg:rounded-full lg:border-none mt-[-50px] lg:mt-[-5px] p-[5px]"
+      class="slider-control slider-next hidden lg:block lg:w-12 lg:h-12 lg:rounded-full lg:border-none mt-[-50px] lg:mt-[50px] p-[5px]"
       @click="slideNext"
     >
       <div
