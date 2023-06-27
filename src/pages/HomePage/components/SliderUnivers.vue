@@ -25,7 +25,7 @@
         </div>
       </button>
       
-      <div class="slider-indicators lg:hidden">
+      <div class="slider-indicators flex lg:hidden">
         <span
           class="slider-indicator"
           v-for="(item, index) in items"
@@ -115,7 +115,6 @@
     transform: translateY(-50%);
     background: linear-gradient(213.88deg, #B1E2FF -67.78%, #68C7FF 175.48%);
     border: 1px solid #ccc;
-    border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
@@ -145,7 +144,6 @@ border-radius: 25px;
   }
   
   .slider-indicators {
-    display: flex;
     justify-content: center;
     margin-top: 10px;
   }
