@@ -1,20 +1,19 @@
 <template>
-     <div
-    class="slider pb-[100px]  w-full"
+  <div
+    class="slider pb-[100px] w-full"
     ref="slider"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd"
   >
     <div class="slider-track lg:gap-5 gap-3" :style="trackStyles">
       <div
-        class="slider-item w-[140px] lg:w-[270px] h-[140px] lg:h-[270px] bg-top mt-[20px] lg:mt-[100px]  p-[12px] rounded-3xl"
+        class="slider-item w-[140px] lg:w-[270px] h-[140px] lg:h-[270px] bg-top mt-[20px] lg:mt-[100px] p-[12px] rounded-3xl"
         v-for="(item, index) in items"
         :key="index"
-      >
-      </div>
+      ></div>
     </div>
     <button
-      class="slider-control slider-prev hidden lg:block w-12 h-12 rounded-full border-none mt-[-50px] p-[5px]"
+      class="slider-control slider-prev hidden lg:block w-12 h-12 rounded-full border-none mt-[-50px] lg:mt-[-5px] p-[5px]"
       @click="slidePrev"
     >
       <div
@@ -28,7 +27,7 @@
       </div>
     </button>
     <button
-      class="slider-control slider-next hidden lg:block lg:w-12 lg:h-12 lg:rounded-full lg:border-none mt-[-50px] p-[5px]"
+      class="slider-control slider-next hidden lg:block lg:w-12 lg:h-12 lg:rounded-full lg:border-none mt-[-50px] lg:mt-[-5px] p-[5px]"
       @click="slideNext"
     >
       <div
@@ -44,7 +43,7 @@
 
     <div class="slider-indicators lg:hidden">
       <span
-        class="slider-indicator"
+        class="slider-indicator "
         v-for="(item, index) in items"
         :key="index"
         :class="{ active: index === currentIndex }"
@@ -55,57 +54,56 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            items: Array.from({ length: 6 }, (v, i) => i + 1),
-            currentIndex: 0,
-            blockSize: {
-          width: 120,
-          height: 224,
-        },
-            slideAmount: 1,
-            swipeThreshold: 50,
-            startX: 0,
-            endX: 0, 
-        };
+  data() {
+    return {
+      items: Array.from({ length: 6 }, (v, i) => i + 1),
+      currentIndex: 0,
+      blockSize: {
+        width: 120,
+        height: 224,
+      },
+      slideAmount: 1,
+      swipeThreshold: 50,
+      startX: 0,
+      endX: 0,
+    };
+  },
+  computed: {
+    trackStyles() {
+      return {
+        transform: `translateX(-${this.currentIndex * this.blockSize.width}px)`,
+      };
     },
-    computed: {
-        trackStyles() {
-            return {
-                transform: `translateX(-${this.currentIndex * this.blockSize.width}px)`,
-            };
-        },
+  },
+  methods: {
+    slidePrev() {
+      if (this.currentIndex > 0) {
+        this.currentIndex--;
+      }
     },
-    methods: {
-        slidePrev() {
-            if (this.currentIndex > 0) {
-                this.currentIndex--;
-            }
-        },
-        slideNext() {
-            if (this.currentIndex < this.items.length - this.slideAmount) {
-                this.currentIndex++;
-            }
-        },
-        goToSlide(index) {
-            this.currentIndex = index;
-        },
-        onTouchStart(event) {
-            this.startX = event.touches[0].clientX;
-        },
-        onTouchEnd(event) {
-            this.endX = event.changedTouches[0].clientX;
-            const deltaX = this.endX - this.startX;
-            if (Math.abs(deltaX) > this.swipeThreshold) {
-                if (deltaX < 0) {
-                    this.slideNext();
-                }
-                else {
-                    this.slidePrev();
-                }
-            }
-        },
+    slideNext() {
+      if (this.currentIndex < this.items.length - this.slideAmount) {
+        this.currentIndex++;
+      }
     },
+    goToSlide(index) {
+      this.currentIndex = index;
+    },
+    onTouchStart(event) {
+      this.startX = event.touches[0].clientX;
+    },
+    onTouchEnd(event) {
+      this.endX = event.changedTouches[0].clientX;
+      const deltaX = this.endX - this.startX;
+      if (Math.abs(deltaX) > this.swipeThreshold) {
+        if (deltaX < 0) {
+          this.slideNext();
+        } else {
+          this.slidePrev();
+        }
+      }
+    },
+  },
 };
 </script>
 <style scoped>

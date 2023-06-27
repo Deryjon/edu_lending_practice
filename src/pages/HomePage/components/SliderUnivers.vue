@@ -93,7 +93,7 @@
   };
   </script>
   
-  <style>
+  <style scoped>
   .slider {
     position: relative;
     width: 100%;

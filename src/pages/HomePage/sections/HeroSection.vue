@@ -62,7 +62,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
   background-image: url("../../../assets/images/main-bg.jpg");
   background-size: cover;
