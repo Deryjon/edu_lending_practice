@@ -1,5 +1,5 @@
 <template>
-  <section class="questions lg:bg-center min-h-screen">
+  <section class="questions lg:bg-center min-h-[650px]">
     <div class="container">
       <theTitle class="text-center py-10  lg:py-20">Вопросы и ответы</theTitle>
       <AccardeonQuestions/>
