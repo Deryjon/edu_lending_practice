@@ -1,5 +1,5 @@
 <template>
-  <section class="photo-students">
+  <section class="photo-students lg:mt-[250px] xl:mt-[0px]">
     <div class="container">
       <TheTitle class="text-center">Фотографии наших студентов</TheTitle>
       <SliderStudents />

@@ -1,8 +1,8 @@
 <template>
   <div
-    class="card w-[300px] lg:w-[367px] h-[122px] lg:h-[180px] mt-[55px] p-[11px]"
+    class="card w-[300px] lg:w-[350px] xl: h-[122px] lg:h-[180px] mt-[55px] p-[10px] lg:p-[5px]"
   >
-    <div class="bord w-[282px] lg:w-[343px] h-[104px] lg:h-[156px]">
+    <div class="bord w-[282px] lg:w-[335px] h-[104px] lg:h-[156px]">
       <div
         class="icon ml-[85px] lg:ml-[100px] mt-[-60px] lg:mt-[-70px] lg:w-[150px]"
       >

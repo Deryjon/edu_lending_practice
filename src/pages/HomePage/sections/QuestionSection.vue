@@ -1,12 +1,12 @@
 <template>
   <section class="questions lg:bg-center min-h-screen">
     <div class="container">
-      <theTitle class="text-center py-10 ">Вопросы и ответы</theTitle>
-      <AccardeonQuestions />
+      <theTitle class="text-center py-10  lg:py-20">Вопросы и ответы</theTitle>
+      <AccardeonQuestions/>
 
     </div>
   </section>
-  <img src="../../../assets/icons/question-box.svg" alt="" class="hidden lg:flex relative bottom-[840px]"> 
+  <img src="../../../assets/icons/question-box.svg" alt="" class="hidden xl:flex  relative  xl:bottom-[740px]"> 
 </template>
 
 <script>

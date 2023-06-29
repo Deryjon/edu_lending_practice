@@ -1,11 +1,11 @@
 <template>
-  <div class="accordion-wrapper flex w-full flex-wrap md:justify-between">
+  <div class="accordion-wrapper flex w-full flex-wrap md:justify-between ">
     <div
       v-for="(item, index) in items"
       :key="index"
       @click="toggleAccordion(index)"
       :class="{ active: activeIndex === index }"
-      class="accordion-item lg:mt-7 w-full md:w-[350px] lg:w-[600px] lg:h-[106px] h-[90px] "
+      class="accordion-item lg:mt-7 w-[95%]  lg:w-[600px] lg:h-[106px] h-[90px] "
       :style="{ height: activeIndex === index ? '316px' : '106px' }"
     >
       <div class="text flex items-center">
@@ -13,7 +13,7 @@
           {{ item.title }}
         </div>
         <button
-          class="slider-control-2 slider-prev w-10 h-10 rounded-full border-none p-[3px] mt-10 absolute ml-[280px] lg:ml-[580px]"
+          class="slider-control-2 slider-prev w-10 h-10 rounded-full border-none p-[3px] mt-10 absolute ml-[280px] xs:ml-[380px] lg:ml-[58  0px]"
           v-if="activeIndex === index"
         >
           <div class="w-[32px] h-[32px] rounded-full border-none pl-3 pt-3">
@@ -26,7 +26,7 @@
         </button>
 
         <button
-          class="slider-control slider-prev w-10 h-10 rounded-full border-none p-[3px] mt-10 absolute ml-[280px] lg:ml-[580px]"
+          class="slider-control slider-prev w-10 h-10 rounded-full  border-none p-[3px] mt-10 absolute ml-[280px] lg:ml-[580px]"
           v-else
         >
           <div class="w-[32px] h-[32px] rounded-full border-none pl-3 pt-3">
@@ -39,7 +39,7 @@
         </button>
       </div>
       <div
-        class="accordion-content rounded-2xl text-[10px] lg:text-[14px] text-gray" 
+        class="accordion-content sm:w-[456px] lg:w-full rounded-2xl text-[10px] lg:text-[14px] text-gray" 
         v-if="activeIndex === index"
       >
         {{ item.content }}
@@ -161,5 +161,38 @@ export default {
 .slider-control-2 div:hover {
   background: rgba(238, 239, 239, 0.797);
   border-radius: 25px;
+}
+
+@media screen and (min-width: 380px) {
+  .slider-control{
+    margin-left: 320px;
+  }
+  .slider-control-2{
+    margin-left: 320px;
+  }
+}
+@media screen and (min-width: 420px) {
+  .slider-control{
+    margin-left: 365px;
+  }
+  .slider-control-2{
+    margin-left: 365px;
+  }
+}
+@media screen and (min-width: 640px) {
+  .slider-control{
+    margin-left: 450px;
+  }
+  .slider-control-2{
+    margin-left: 450px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .slider-control{
+    margin-left: 580px;
+  }
+  .slider-control-2{
+    margin-left: 580px;
+  }
 }
 </style>
