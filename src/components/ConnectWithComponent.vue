@@ -67,11 +67,11 @@
                   alt="input-name-icon"
                 />
               </div>
-              <input
+              <textarea rows="5" cols="30"
                 type="text"
                 placeholder="Дополнительные комментарии"
-                class="bg-[rgba(248,252,255,255)] outline-none text-[10px] text-[rgba(189,210,222,255)] w-[200px] mb-[45px]"
-              />
+                class="bg-[rgba(248,252,255,255)] outline-none text-[10px] text-[rgba(189,210,222,255)] w-[200px] mt-[15px]"
+              ></textarea>
             </div>
           </div>
         </div>
@@ -80,7 +80,11 @@
         </div>
       </form>
     </div>
-    <div class="bg-img min-h-screen w-full "></div>
+    <div class="bg-img min-h-screen w-full ">
+      <div class="icon-tree pt-20">
+        <img src="../assets/icons/tree-icon.svg" alt="">
+      </div>
+    </div>
   </section>
 </template>
 <script>
@@ -111,7 +115,7 @@ export default {
       // Добавляем пробелы в указанном формате
       let formattedNumber = "+998 ";
       for (let i = 0; i < digits.length; i++) {
-        if (i === 2 || i === 5 || i === 8) {
+        if (i === 2 || i === 5 || i === 7) {
           formattedNumber += " ";
         }
         formattedNumber += digits[i];
@@ -148,12 +152,12 @@ form {
     background-image: url(../assets/images/bg-mobile.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center bottom 220px;
+    background-position: center bottom 330px;
 
   }
 }
 
-@media screen and (min-width: 380px) {
+/* @media screen and (min-width: 380px) {
   .bg-img {
     background-image: url(../assets/images/bg-mobile.jpg);
     background-repeat: no-repeat;
@@ -207,5 +211,5 @@ form {
     background-position: center bottom 10px;
 
   }
-}
+} */
 </style>
