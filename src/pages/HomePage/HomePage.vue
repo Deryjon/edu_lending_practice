@@ -5,6 +5,7 @@
     <PhotoStudentSection />
     <QuestionSection />
     <ConnectWithComponent />
+    <QuestionComponent />
   </div>
 </template>
 <script>
@@ -14,6 +15,7 @@ import PhotoStudentSection from "./sections/PhotoStudentSection.vue";
 import ConnectWithComponent from "../../components/ConnectWithComponent.vue";
 import QuestionSection from "./sections/QuestionSection.vue";
 
+import QuestionComponent from "../../components/QuestionComponent.vue";
 export default {
   components: {
     HeroSection,
@@ -21,6 +23,7 @@ export default {
     PhotoStudentSection,
     QuestionSection,
     ConnectWithComponent,
+    QuestionComponent,
   },
 };
 </script>
