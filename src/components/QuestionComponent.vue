@@ -59,10 +59,10 @@
       </div>
       <theCallButton class="ml-auto mr-auto mt-[30px] lg:mt-0" />
     </div>
-    <div class="icon hidden lg:flex absolute top-[4500px] left-[1075px] w-[438px] h-[448px]">
+    <div class="icon hidden xl:flex absolute top-[4500px] left-[1075px] w-[438px] h-[448px]">
       <img src="../assets/icons/truck-red.svg" alt="" class="w-full h-full">
     </div>
-    <div class="icon hidden lg:flex absolute top-[4340px]  w-[438px] h-[448px]">
+    <div class="icon hidden xl:flex absolute top-[4340px]  w-[438px] h-[448px]">
       <img src="../assets/icons/tree-icon-2.svg" alt="" class="w-full h-full">
     </div>
   </section>
