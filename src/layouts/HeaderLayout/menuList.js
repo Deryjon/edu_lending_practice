@@ -5,7 +5,7 @@ export default [
 	},
 	{
 		name: 'О нас',
-		link: ''
+		link: 'about'
 	},
 	{
 		name: 'Услуги',
