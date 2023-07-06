@@ -1,7 +1,13 @@
 <template>
-    <h1>Aboutt</h1>
+  <div class="about-page min-h-screen ">
+    <AboutSection />
+  </div>
 </template>
 
 <script>
-export default [];
+import AboutSection from "./sections/AboutSection.vue";
+
+export default {
+  components: { AboutSection },
+};
 </script>
