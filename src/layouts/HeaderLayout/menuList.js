@@ -1,7 +1,7 @@
 export default [
 	{
 		name: 'Главная',
-		link: ''
+		link: 'home'
 	},
 	{
 		name: 'О нас',
