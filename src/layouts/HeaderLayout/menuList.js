@@ -9,7 +9,7 @@ export default [
 	},
 	{
 		name: 'Услуги',
-		link: ''
+		link: 'services'
 	},
 	{
 		name: 'Университеты',

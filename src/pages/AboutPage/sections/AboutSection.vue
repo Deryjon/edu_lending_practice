@@ -23,9 +23,9 @@
         </p>
       </div>
       <theTitle class="text-center mt-[30px]">О нас</theTitle>
-      <div class="wrapper flex justify-center gap-16 mt-[25px] ">
+      <div class="wrapper flex justify-between mt-[15px]  lg:mt-[25px] ">
 
-        <div class="text lg:w-[560px]">
+        <div class="text lg:w-[650px]">
           <p class="pt-[15px] text-[10px] lg:text-[14px] text-gray">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
