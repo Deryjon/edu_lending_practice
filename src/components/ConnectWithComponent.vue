@@ -2,14 +2,6 @@
   <section
     class="connect lg:min-h-screen mt-20 lg:mt-[150px] xl:mt-[-200px] lg:mb-[50px]"
   >
-    <div class="img">
-      <img
-        src="../assets/icons/pen-connect.svg"
-        class="absolute right-0 bottom-[-2900px] lg:w-[290px] lg:h-[290px]"
-        alt=""
-      />
-    </div>
-
     <div class="container lg:relative">
       <div
         class="img hidden xl:flex lg:absolute lg:left-[350px] lg:top-[-80px]"

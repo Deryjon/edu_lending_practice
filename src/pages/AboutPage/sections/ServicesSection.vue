@@ -1,5 +1,5 @@
 <template>
-  <section class="services min-h-screen">
+  <section class="services min-h-screen pb-[100px] lg:mb-[210px]">
     <div class="container">
       <theTitle class="text-center">Услуги</theTitle>
       <theSubtitle

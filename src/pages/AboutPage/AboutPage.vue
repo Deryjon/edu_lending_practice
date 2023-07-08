@@ -2,8 +2,8 @@
   <div class="about-page min-h-screen">
     <AboutSection />
     <ServicesSection />
-    <!-- <ConnectWithComponents />
-    <QuestionComponent  /> -->
+     <ConnectWithComponents />
+    <QuestionComponent  /> 
   </div>
 </template>
 
