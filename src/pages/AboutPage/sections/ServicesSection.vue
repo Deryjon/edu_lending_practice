@@ -22,8 +22,7 @@
 <script>
 import theTitle from "../../../ui/theTitle.vue";
 import theSubtitle from "../../../ui/theSubtitle.vue";
-
-import ServicesCard from "../components/ServicesCard.vue";
+import ServicesCard from "../../../components/ServicesCard.vue";
 export default {
   data() {
     return {
@@ -52,7 +51,7 @@ export default {
 
         {
           image: "src/assets/icons/translate-icon.svg",
-          text: "Оформление и перевод документов на иностранный язык",
+          text: "Оформл`ение и перевод документов на иностранный язык",
         },
       ],
     };

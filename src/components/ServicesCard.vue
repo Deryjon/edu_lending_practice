@@ -17,7 +17,7 @@
     </div>
   </template>
   <script>
-  import TheSubtitle from "../../../ui/theSubtitle.vue";
+  import TheSubtitle from "../ui/theSubtitle.vue";
   export default {
     props: {
       data: {

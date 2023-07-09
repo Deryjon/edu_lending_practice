@@ -1,8 +1,11 @@
 <template>
-    <h1>sevicfess</h1>
+  <div class="services-page min-h-screen">
+    <ServiceSection />
+  </div>
 </template>
 <script>
-export default{
-    
-}
+import ServiceSection from "./sections/ServiceSection.vue";
+export default {
+  components: { ServiceSection },
+};
 </script>

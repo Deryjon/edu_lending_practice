@@ -1,7 +1,7 @@
 <template>
   <section class="about min-h-screen mt-[100px] lg:mt-[200px]">
     <div class="container">
-      <ThePathLink>Услуги</ThePathLink>
+      <ThePathLink>О нас</ThePathLink>
       <theTitle class="text-center mt-[30px]">О нас</theTitle>
       <div class="wrapper flex justify-between mt-[15px]  lg:mt-[25px] ">
 
