@@ -1,27 +1,7 @@
 <template>
   <section class="about min-h-screen mt-[100px] lg:mt-[200px]">
     <div class="container">
-      <div class="path-sections flex items-center">
-        <div class="icon w-[10px] lg:w-[14px] h-[10px] lg:h-[14px]">
-          <img
-            src="../../../assets/icons/home-path-icon.svg"
-            alt="home-path-icon"
-            class="w-full h-full"
-          />
-        </div>
-        <p class="ml-[6px] text-xs lg:text-sm text-[#D9D9D9]">Главная</p>
-        <div class="icon-prev ml-[10px] lg:ml-[22px]">
-          <img
-            src="../../../assets/icons/path-svg-link.svg"
-            alt="path-svg-link"
-          />
-        </div>
-        <p
-          class="about-path-link text-xs text-[#7A7A7A] ml-[10px] lg:ml-[22px] lg:text-sm"
-        >
-          О нас
-        </p>
-      </div>
+      <ThePathLink>Услуги</ThePathLink>
       <theTitle class="text-center mt-[30px]">О нас</theTitle>
       <div class="wrapper flex justify-between mt-[15px]  lg:mt-[25px] ">
 
@@ -65,7 +45,9 @@
 </template>
 <script>
 import theTitle from "../../../ui/theTitle.vue";
+
+import ThePathLink from "../../../ui/thePathLink.vue";
 export default {
-  components: { theTitle },
+  components: { theTitle, ThePathLink },
 };
 </script>
