@@ -13,11 +13,11 @@ export default [
 	},
 	{
 		name: 'Университеты',
-		link: ''
+		link: 'universities'
 	},
 	{
 		name: 'Студенты',
-		link: ''
+		link: 'students'
 	},
 	{
 		name: 'Новости',
