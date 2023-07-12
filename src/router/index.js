@@ -5,6 +5,7 @@ const AboutPage = () => import("../pages/AboutPage/AboutPage.vue");
 const ServicesPage = () => import("../pages/ServicesPage/ServicesPage.vue");
 const UniversityPage = () => import("../pages/UniversityPage/UniversityPage.vue");
 const StudentsPage = () => import("../pages/StudentsPage/StudentsPage.vue");
+const ContactsPage = () => import("../pages/ContactsPage/ContactsPage.vue");
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,11 @@ const router = createRouter({
       path: "/students",
       name: "students",
       component: StudentsPage,
+    },
+    {
+      path: "/contacts",
+      name: "contacts",
+      component: ContactsPage  ,
     },
   ],
 });

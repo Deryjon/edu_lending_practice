@@ -25,6 +25,6 @@ export default [
 	},
 	{
 		name: 'Контакты',
-		link: ''
+		link: 'contacts'
 	},
 ]
