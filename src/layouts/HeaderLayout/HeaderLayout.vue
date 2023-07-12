@@ -2,7 +2,7 @@
   <header class="header  z-50 fixed top-0 w-full transition-all"
   :class="isScrolled ? 'header-scrolled lg:pt-5 pt-3 lg:pb-6 pb-3' : 'lg:pt-8'">
     <div class="container flex items-center justify-between">
-      <HeaderLogo  />
+      <HeaderLogo  @click="$router.push({ name: 'home'})"/>
       <HeaderLinks  />
       <HeaderMenu />
       <HeaderActions @openMenu="toggleMenu" />

@@ -1,23 +1,23 @@
 export default [
 	{
 		name: 'Главная',
-		link: ''
+		link: 'home'
 	},
 	{
 		name: 'О нас',
-		link: ''
+		link: 'about'
 	},
 	{
 		name: 'Услуги',
-		link: ''
+		link: 'services'
 	},
 	{
 		name: 'Университеты',
-		link: ''
+		link: 'universities'
 	},
 	{
 		name: 'Студенты',
-		link: ''
+		link: 'students'
 	},
 	{
 		name: 'Новости',
@@ -25,6 +25,6 @@ export default [
 	},
 	{
 		name: 'Контакты',
-		link: ''
+		link: 'contacts'
 	},
 ]
