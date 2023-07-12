@@ -5,41 +5,46 @@
     <div class="container">
       <thePathLink>Студенты</thePathLink>
       <theTitle class="text-center mt-[30px]">Студенты</theTitle>
-      <CardStudentsComponent
-        v-for="item in studentsData"
-        :key="item.text"
-        :data="item"
-        class="ml-auto mr-auto"
-      />
 
-        <v-card
-          class="card lg:flex lg:gap-5 card w-[300px] lg:w-[850px] h-[390px] lg:h-[200px] bg-[rgba(255, 255, 255, 1)] mt-6 mx-auto rounded-[20px] p-[9px] lg:p-[12px]"
-          v-for="item in studentsData"
-          :key="item.name"
-        >
-          <v-img class="card-img w-[282px] h-[182px] bg-brand rounded-[20px]">
-            <img :src="item.image" alt="card-img-student" class="ml-[60px]" />
-          </v-img>
-          <div class="text">
-            <p class="text-gray font-bold text-sm lg:text-lg mt-[10px]">
-              {{ item.name }}
-            </p>
-            <p class="text-[10px] lg:text-xs text-gray mt-1 lg:mt-[6px]">
-              {{ item.description }}
-            </p>
-            <div class="university flex gap-2 mt-[6px] lg:mt-[10px]">
-              <div class="icon">
-                <img src="../../../assets/icons/university-icon.svg" alt="" />
-              </div>
-              <p class="text-gray text-[10px] lg:text-xs">
-                {{ item.university }}
-              </p>
+      <CardStudentsComponent class="ml-auto mr-auto" />
+
+      <!-- <v-card
+        class="card lg:flex lg:gap-5 card w-[300px] lg:w-[850px] h-[390px] lg:h-[200px] bg-[rgba(255, 255, 255, 1)] mt-6 mx-auto rounded-[20px] p-[9px] lg:p-[12px]"
+        v-for="(commentIndex, index) in commentsToShow"
+        :key="index"
+        v-show="index < studentsData.length"
+      >
+        <v-img class="card-img w-[282px] h-[182px] bg-brand rounded-[20px]">
+          <img
+            :src="studentsData[index].image"
+            alt="card-img-student"
+            class="ml-[60px]"
+          />
+        </v-img>
+        <div class="text">
+          <p class="text-gray font-bold text-sm lg:text-lg mt-[10px]">
+            {{ studentsData[index].name }} {{ index + 1 }}
+          </p>
+          <p class="text-[10px] lg:text-xs text-gray mt-1 lg:mt-[6px]">
+            {{ studentsData[index].description }}
+          </p>
+          <div class="university flex gap-2 mt-[6px] lg:mt-[10px]">
+            <div class="icon">
+              <img src="../../../assets/icons/university-icon.svg" alt="" />
             </div>
+            <p class="text-gray text-[10px] lg:text-xs">
+              {{ studentsData[index].university }}
+            </p>
           </div>
-        </v-card>
-      </div>
-
-    <theMoreButton @click="loadMore" class="mx-auto mt-[20px] lg:mt-[30px]"/>
+        </div>
+      </v-card>
+      <div class="action" v-show="commentsToShow < studentsData.length">
+        <theMoreButton
+        @click="commentsToShow += 3"
+        class="mx-auto mt-[20px] lg:mt-[30px]"
+        />
+      </div> -->
+    </div>
   </section>
 </template>
 <script>
@@ -51,8 +56,8 @@ export default {
   components: { theTitle, thePathLink, CardStudentsComponent, theMoreButton },
 
   data: () => ({
-    currentPage: 1,
-    pageSize: 2 ,
+    totalComments: 0,
+    commentsToShow: 3,
     studentsData: [
       {
         image: "src/assets/icons/man-students.svg",
@@ -75,22 +80,108 @@ export default {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
         university: "Название университета",
       },
-     
-    ],
-  }),
-  methods: {
-    loadMore() {
-      const newItems = Array.from({ length: this.pageSize }, () => ({
+      {
         image: "src/assets/icons/man-students.svg",
         name: "Александр Иванов",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
         university: "Название университета",
-      }));
-
-      this.studentsData = this.studentsData.concat(newItems);
-      this.currentPage++;
-    },
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+      {
+        image: "src/assets/icons/man-students.svg",
+        name: "Александр Иванов",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+        university: "Название университета",
+      },
+    ],
+  }),
+  methods: {
+    // loadMore() {
+    //   // const newItems = Array.from({ length: this.pageSize }, () => ({
+    //   //   image: "src/assets/icons/man-students.svg",
+    //   //   name: "Александр Иванов",
+    //   //   description:
+    //   //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua!",
+    //   //   university: "Название университета",
+    //   // }));
+    //   // this.studentsData = this.studentsData.concat(newItems);
+    //   // this.currentPage++;
+    // },
+  },
+  mounted() {
+    this.totalComments = this.studentsData.length;
+    console.log(this.studentsData.length);
   },
 };
 </script>
