@@ -1,8 +1,9 @@
 <template>
-
+  <div class="students-page min-h-screen">
+    <StudentsSection />
+  </div>
 </template>
 <script>
-export default{
-    
-}
+import StudentsSection from "./sections/StudentsSection.vue";
+export default { components: { StudentsSection } };
 </script>
