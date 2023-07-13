@@ -24,10 +24,10 @@
         <img src="../assets/icons/girl-niz.svg" alt="" />
       </div>
       <form
-        class="w-[300px] lg:w-[560px] h-[278px] lg:h-[400px] rounded-[20px] bg-[#fff] pt-2 lg:pt-3 ml-auto mr-auto xl:absolute xl:left-[700px] 2xl:left-[900px] lg:top-[30px]"
+        class="w-[300px] lg:w-[560px] h-[278px] lg:h-[400px] rounded-[20px] bg-[#fff] pt-2 lg:pt-3 ml-auto mr-auto xl:absolute xl:left-[700px] 2xl:left-[900px] lg:top-[30px] lg:p-1 "
       >
         <div
-          class="bord w-[282px] lg:w-[536px] h-[260px] lg:h-[376px] rounded-[20px] mx-2 lg:mx-3"
+          class="bord w-[282px] lg:w-[536px] h-[260px] lg:h-[376px] rounded-[20px] mx-2 lg:mt-1"
         >
           <div class="text mt-2 lg:mt-6 lg:w-[331px] lg:ml-auto lg:mr-auto">
             <h3 class="title text-lg lg:text-2xl font-bold text-center">
