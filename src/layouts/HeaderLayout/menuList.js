@@ -21,7 +21,7 @@ export default [
 	},
 	{
 		name: 'Новости',
-		link: ''
+		link: 'news'
 	},
 	{
 		name: 'Контакты',

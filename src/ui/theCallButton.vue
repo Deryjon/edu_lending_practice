@@ -3,7 +3,7 @@
     <div class="img w-[38px] h-[38px] rounded-3xl m-[5px] flex items-center">
       <img src="../assets/icons/phone-icon.svg " class="p-3" alt="" />
     </div>
-    <p class="flex py-3 ml-[85px] lg:ml-3  text-white text-sm font-bold lg:text-[16px]">Связаться с нами</p>
+    <p class="flex py-3  ml-[44px] lg:ml-[10px]  text-white text-sm font-bold lg:text-[16px]">Связаться с нами</p>
   </button>
 </template>
 <script>
