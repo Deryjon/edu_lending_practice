@@ -23,6 +23,7 @@
       >
         <img src="../assets/icons/girl-niz.svg" alt="" />
       </div>
+			
       <form
         class="w-[300px] lg:w-[560px] h-[278px] lg:h-[400px] rounded-[20px] bg-[#fff] pt-2 lg:pt-3 ml-auto mr-auto xl:absolute xl:left-[700px] 2xl:left-[900px] lg:top-[30px] lg:p-1 "
       >

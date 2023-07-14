@@ -4,8 +4,9 @@
     v-for="(commentIndex, index) in commentsToShow"
     :key="index"
     v-show="index < newsData.length"
+    @click="goToNews(newsData[index].id)"
   >
-    <v-img class="card-img w-[282px] h-[182px]  rounded-[20px]">
+    <v-img class="card-img w-[282px] h-[182px] rounded-[20px]">
       <img
         :src="newsData[index].image"
         alt="card-img-student"
@@ -14,7 +15,7 @@
     </v-img>
     <div class="text">
       <p class="text-gray font-bold text-sm lg:text-lg mt-[10px]">
-        {{ newsData[index].name }} {{ index + 1 }}
+        {{ newsData[index].name }} {{ newsData[index].id }}
       </p>
       <p class="text-[10px] lg:text-xs text-gray mt-1 lg:mt-[6px]">
         {{ newsData[index].description }}
@@ -24,11 +25,10 @@
           <img src="../../../assets/icons/time-icon-news.svg" alt="" />
         </div>
         <p class="text-gray text-[10px] lg:text-xs">
-					Время чтения:
-					<span class="font-bold">
-
-						{{ newsData[index].university }}
-					</span>
+          Время чтения:
+          <span class="font-bold">
+            {{ newsData[index].time }}
+          </span>
         </p>
       </div>
     </div>
@@ -41,126 +41,27 @@
   </div>
 </template>
 <script>
-
 import theMoreButton from "../../../ui/theMoreButton.vue";
+import dataNews from '../../../dataNews.js'
 export default {
-    components: {theMoreButton},
-    data: () => ({
+  components: { theMoreButton },
+  data: () => ({
+    selectedNewsData: null,
     totalComments: 0,
     commentsToShow: 3,
-    newsData: [
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        university: "10 минут",
-      },
-      {
-        image: "src/assets/images/red-square.jpg",
-        name: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit! Lorem ipsum dolor sit amet, consectetur adipiscing elit...;",
-        time: "10 минут",
-      },
-    ],
+    newsData: dataNews
   }),
+
   methods: {
     // loadMore() {
     //   // this.studentsData = this.studentsData.concat(newItems);
     //   // this.currentPage++;
     // },
+    goToNews(id) {
+      this.selectedNews = id;
+      this.$router.push({ name: "new", params: { id: id } });
+      console.log();
+    },
   },
   mounted() {
     this.totalComments = this.newsData.length;
