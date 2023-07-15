@@ -157,7 +157,7 @@ form {
   box-shadow: 0px 0px 40px 0px rgba(119, 205, 255, 0.3);
 }
 .bord {
-  border: 2px dashed gray;
+  border: 2px dashed rgb(234, 234, 234);
 }
 ::placeholder {
   color: rgba(189, 210, 222, 255);

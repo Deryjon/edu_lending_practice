@@ -66,7 +66,16 @@
             </div>
           </div>
         </div>
-        <theCallButton class="mx-auto hidden lg:flex"/>
+        <theCallButton class="mx-auto hidden lg:flex" />
+      </div>
+      <div class="icon-1 absolute">
+        <img src="../../../assets/icons/point-1.svg" alt="" />
+      </div>
+      <div class="icon-2 ml-[150px]">
+        <img src="../../../assets/icons/point-2.svg" alt="" />
+      </div>
+      <div class="icon-3 absolute left-[150px]">
+        <img src="../../../assets/icons/point-3.svg" alt="" />
       </div>
     </div>
   </section>
