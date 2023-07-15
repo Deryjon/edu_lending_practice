@@ -1,6 +1,6 @@
 <template>
   <section
-    class="new min-h-screen relative pb-[100px] lg:mb-[300px] mt-[100px] lg:mt-[200px] "
+    class="new min-h-screen  pb-[100px] lg:mb-[300px] mt-[100px] lg:mt-[200px] "
   >
     <div class="container">
       <thePathLinks>
@@ -13,8 +13,8 @@
 
 
       <TheTitle class="text-center mt-[30px]">{{ selectedNewsData.name }}</TheTitle>
-      <div class="img w-[1200px] h-[200px] mr-auto ml-auto lg:h-[400px]  rounded-3xl bg-red-500 mt-[15px] hidden lg:flex" ></div>
-      <p class="text-[10px] lg:text-sm mt-[15px] w-[1200px] text-gray mr-auto ml-auto" >
+      <div class="img w-[1000px] h-[200px] mr-auto ml-auto lg:h-[400px]  rounded-3xl bg-red-500 mt-[15px] hidden lg:flex" ></div>
+      <p class="text-[10px] lg:text-sm mt-[15px] lg:w-[1000px] text-gray mr-auto ml-auto" >
        {{selectedNewsData.description}}
       </p>
       <div class="img w-full h-[200px] lg:h-[400px] rounded-3xl bg-red-500 mt-[15px] lg:hidden" >
