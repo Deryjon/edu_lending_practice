@@ -68,14 +68,105 @@
         </div>
         <theCallButton class="mx-auto hidden lg:flex" />
       </div>
-      <div class="icon-1 absolute">
+      <div class="icon-1 lg:left-[65%] lg:top-[60%] absolute">
         <img src="../../../assets/icons/point-1.svg" alt="" />
       </div>
-      <div class="icon-2 ml-[150px]">
+      <div class="icon-2 ml-[150px] lg:absolute lg:top-[30%] lg:left-[60%]">
         <img src="../../../assets/icons/point-2.svg" alt="" />
       </div>
-      <div class="icon-3 absolute left-[150px]">
+      <div class="icon-3 absolute left-[150px] lg:top-[30%] lg:left-[43%]">
         <img src="../../../assets/icons/point-3.svg" alt="" />
+      </div>
+      <div
+        class="map hidden lg:flex w-[268px] lg:w-[367px] bg-white h-[189px] lg:h-[377px] rounded-[20px] p-[9px] lg:p-[12px] ml-auto mr-auto mt-[30px] lg:absolute lg:left-[10%] lg:top-[20%]"
+      >
+        <div
+          class="bord w-[250px] lg:w-[343px] h-[171px] lg:h-[353px] rounded-[20px] p-[12px] lg:p-[30px]"
+        >
+          <div class="phone">
+            <div class="top flex items-center gap-[6px]">
+              <div class="icon w-[13px] lg:w-[16px] h-[13px] lg:h-[16px]">
+                <img
+                  src="@/assets/icons/map-location-1.svg"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="title text-sm lg:text-base font-bold">г. Город</div>
+            </div>
+            <div class="numbers pl-5">
+              <p class="text-gray text-xs lg:text-sm">ул. Улица, 24 (Офис 24)</p>
+            </div>
+          </div>
+          <div class="phone mt-[10px] lg:mt-[15px]">
+            <div class="top flex items-center gap-[6px]">
+              <div class="icon w-[13px] lg:w-[14px] h-[13px] lg:h-[18px]">
+                <img
+                  src="@/assets/icons/map-location-2.svg"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="title text-sm lg:text-base font-bold">г. Город</div>
+            </div>
+            <div class="location pl-5">
+              <p class="text-gray text-xs lg:text-sm">
+                г.Город, ул. Улица, 24 (Офис 24)
+              </p>
+            </div>
+          </div>
+          <div class="phone mt-[10px] lg:mt-[15px]">
+            <div class="top flex items-center gap-[6px]">
+              <div class="icon w-[13px] lg:w-[14px] h-[13px] lg:h-[18px]">
+                <img
+                  src="@/assets/icons/map-location-3.svg"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="title text-sm lg:text-base font-bold">г. Город</div>
+            </div>
+            <div class="location pl-5">
+              <p class="text-gray text-xs lg:text-sm">
+                г.Город, ул. Улица, 24 (Офис 24)
+              </p>
+            </div>
+          </div>
+          <div class="phone mt-[10px] lg:mt-[15px]">
+            <div class="top flex items-center gap-[6px]">
+              <div class="icon w-[13px] lg:w-[14px] h-[13px] lg:h-[18px]">
+                <img
+                  src="@/assets/icons/map-location-4.svg"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="title text-sm lg:text-base font-bold">г. Город</div>
+            </div>
+            <div class="location pl-5">
+              <p class="text-gray text-xs lg:text-sm">
+                г.Город, ул. Улица, 24 (Офис 24)
+              </p>
+            </div>
+          </div>
+          <div class="phone mt-[10px] lg:mt-[15px]">
+            <div class="top flex items-center gap-[6px]">
+              <div class="icon w-[13px] lg:w-[14px] h-[13px] lg:h-[18px]">
+                <img
+                  src="@/assets/icons/map-location-5.svg"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="title text-sm lg:text-base font-bold">г. Город</div>
+            </div>
+            <div class="location pl-5">
+              <p class="text-gray text-xs lg:text-sm">
+                г.Город, ул. Улица, 24 (Офис 24)
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
